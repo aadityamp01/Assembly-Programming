@@ -1,0 +1,41 @@
+PROBLEM STATEMENT: Write an X86/64 ALP to accept a string and to display its length.
+
+
+ALGORITHM: 
+1.	Accept string from user
+2.	;When you accept string, length automatically returns in RAX register
+3.	Call display procedure, to display length
+Display Procedure
+
+When you want to display number on screen you need to convert number from hex to ascii format
+
+Algorithm for number display on screen-Hex to Ascii conversion
+Display Procedure
+1.	Take count value as 16 into cnt variable; count for 16 digits to display
+2.	 Move address of “result” variable into rdi.
+3.	Rotate left rbx register by 4 bits.  ;rbx reg =16 digit number to display
+4.	Move bl into al.
+5.	 And al with 0FH.
+6.	Compare al with 09H.
+7.	if greater Add 37H into al.
+8.	 Else Add 30H into al
+9.	 Move al into memory location pointed by rdi.
+10.	 Increment rdi.
+11.	  Loop the statements till count value  becomes zero.
+Return from procedure.
+
+
+Input Format
+Android
+
+Output Format
+0000000000000007
+
+//Check stringlen.asm file for code
+//strlen is output file 
+
+//Linux Commands
+
+nasm -f elf64 stringlen.asm 
+ld -o strlen stringlen.o
+./strlen
