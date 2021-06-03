@@ -1,0 +1,23 @@
+PROBLEM STATEMENT: Write an x86/64 ALP to find largest of given BYTE/WORD/DWORD/ 64-bit numbers
+
+ALGORITHM:
+1.	Declare array with numbers (input)
+2.	Take variable for counter
+3.	Assign rsi to array to get current number
+4.	assign 0 value to al register
+5.	compare value of al register with value pointed by rsi in array (Mov al.[rsi])
+6.	If number of rsi  is less than al, then perform exchange operation
+7.	otherwise increment rsi and compare again with al
+8.	continue above comparison until counter becomes zero
+9.	largest number store in al
+10.	call display procedure to display largest number
+
+
+//Input Format
+
+11h,55h,33h,66h,44h
+ 
+
+//Output Format
+
+0000000000000066
