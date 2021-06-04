@@ -1,0 +1,27 @@
+PROBLEM STATEMENT: Write X86/64 ALP to count number of positive and negative numbers from the array 
+
+//ALGORITHM: 
+1.	Initialize index register with the offset of array of signed numbers
+2.	Initialize ECX with array element count
+3.	Initialize positive number count and negative number count to zero
+4.	Perform MSB test of array element
+5.	If set jump to step 7
+6.	Increment positive number count and jump to step 8
+7.	Increment negative number count and continue
+8.	Point index register to the next element
+9.	Decrement the array element count from ECX, if not zero jump to step 4, else continue
+10.	Display Positive number message and then display positive number count
+11.	Display Negative number message and then display negative number count
+12.	EXIT
+
+
+//Input Format
+9000000000000000h,8000000000000000h,90h,20h 
+
+
+//Output Format
+
+Count of positive numbers
+02
+Count of negative numbers
+02
