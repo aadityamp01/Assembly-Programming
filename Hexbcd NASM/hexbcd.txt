@@ -1,0 +1,81 @@
+PROBLEM STATEMENT: Write X86/64 ALP to convert 4-digit Hex number into its equivalent BCD number and 5- digit BCD number into its equivalent HEX number. Make your program user friendly to accept the choice from user for: (a) HEX to BCD b) BCD to HEX (c) EXIT.
+Display proper strings to prompt the user while accepting the input and displaying the result. (Wherever necessary, use 64-bit registers)
+Display appropriate messages to prompt the user while accepting the input and displaying the result.
+
+
+
+ALGORITHM :
+1 HEX to BCD
+1. Define variable on data segment.
+2. Display message on screen ENTER 4-DIGIT HEX NO.
+3. Accept BCD NO from user.
+4. Transfer 0AH as a divisor in one of the register.
+5. Divide the no by 0AH
+6. PUSH reminder in one of the register
+7. Increment Count _1.
+8. Repeat Till BCD NO is not zero go to step 5.
+9. Pop the content of Reminder.
+10. Display result by calling display procedure.
+11. Decrement Count _1, till Count is not zero repeat step 9 else go to step 12.
+12. Stop
+2 BCD to HEX
+1. Define variables in data segment
+2. Display message on screen ENTER 5-DIGIT BCD NO.
+3. Accept single digit from user
+4. Transfer 10000 to multiplier
+5. Multiply accepted BCD digit by multiplier & add it to RESULT variable.
+6. Accept single digit from user
+7. Transfer 1000 to multiplier
+8. Multiply accepted BCD di ULT variable.
+9. Accept single digit from u
+10. Transfer 100 to multiplier
+11. Multiply accepted BCD di ULT variable.
+12. Accept single digit from u
+13. Transfer 10 to multiplier
+14. Multiply accepted BCD digit by multiplier & add it to RESULT variable.
+15. Accept single digit from user
+16. Transfer 1 to multiplier
+17. Multiply accepted BCD digit by multiplier & add it to RESULT variable.
+18. Display result by calling display procedure
+19. Stop.
+
+
+
+//Input Format
+ABDF
+
+//Output Format
+
+MENU:
+1.Hex to BCD conversion
+2.BCD to Hex conversion
+3.Exit
+Enter your choice
+1
+Enter the 4 digit HEX number
+ABDF
+Its BCD equivalent is
+43999
+MENU:
+1.Hex to BCD conversion
+2.BCD to Hex conversion
+3.Exit
+Enter your choice
+2
+Enter the 5 digit BCD number
+2468
+Its HEX equivalent is
+06142
+MENU:
+1.Hex to BCD conversion
+2.BCD to Hex conversion
+3.Exit
+Enter your choice
+1
+Enter the 4 digit HEX number
+000F
+Its BCD equivalent is
+15999
+
+
+
