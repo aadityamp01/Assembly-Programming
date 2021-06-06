@@ -1,0 +1,25 @@
+PROBLEM STATEMENT: Write X86/64 ALP to detect protected mode and display the values of 
+GDTR, LDTR, IDTR, TR and MSW Registers also identify CPU type using CPUID instruction.
+
+
+ALGORITHM: 
+1.	Read CR0 i.e. MSW and store it in memory
+2.	Check LSB of same, if 0, display real mode message and jump to step 4 else continue
+3.	Display protected mode message
+4.	Read GDTR, IDTR, LDTR, TR in memory
+5.	Display GDTR, IDTR, LDTR, TR & MSW from memory
+6.	Use CPUID instruction
+7.	Exit
+
+
+//Output Format
+
+System is working in: 
+Protected Mode
+Contents of GDTR: 00001000007F
+Contents of LDTR: 0000
+Contents of IDTR: 000000000FFF
+Contents of TR: 0040
+Contents of MSW: 80050033
+CPU identification: 00000016
+
