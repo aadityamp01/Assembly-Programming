@@ -1,0 +1,25 @@
+PROBLEM STATEMENT: Write X86/64 ALP to perform overlapped block transfer with 
+string specific instructions Block containing data can be defined in the data segment.
+
+
+ALGORITHM
+Overlapped mode
+1. Initialize 2 memory blocks pointed by source and destination registers.
+2. Initialize counter.
+3. Move the contents pointed by source register [si+count] to a variable.
+4. Decrement address of source register.
+5. Move the contents from variable into location pointed by destination register [di+count]
+6. Decrement destination registers.
+7. Decrement counter.
+8. Repeat from steps 3 to step 6 until counter is 0.
+9. End.
+
+
+// Input Format
+Source Block contents are:
+11 22 33 44 55 
+
+
+//Output Format
+Overlapped Destination Block contents are:
+11 22 11 22  33 44 55
