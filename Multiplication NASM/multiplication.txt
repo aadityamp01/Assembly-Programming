@@ -1,0 +1,47 @@
+PROBLEM STATEMENT: Write X86/64 ALP to perform multiplication of 
+two 8-bit hexadecimal numbers. Use successive addition and add and shift 
+method. (use of 64-bit registers is expected).
+
+
+
+ALGORITHM :
+1.	Initialize data section.
+2.	Initialize .bss section.
+3.	Write macro, accept macro
+4.	Accept the number.
+5.	Convert into ASCII to HEX
+6.	Accept another number.
+7.	Initialize the counter.
+8.	Store the count in ARRAY.
+9.	For Successive addition
+10.	 Assign sum=first number count=0
+11.	 Add the first number with counter and store in register.
+12.	 Repeat the loop with defragmentation of second number.
+13.	 sum=sum+ Multiplicand
+14.	 Decrement count. 
+15.	 print sum 
+16.	 ADD and Shift method
+17.	 Assign count=no of digits in multiplier(edx=08h), sum=0,shiftvar=0,Count=0
+18.	 Store the first number in register
+19.	 Right carry on first number generate then go to step 20,not generate carry then    
+ go to step 24
+20.	 Perform Shift left Multiplier by count value
+21.	 If carry flag set, sum=sum+(Left_shifted multiplicand by shiftvar)
+22.	 shiftvar=shiftvar+1
+23.	 Add value in the temporary variable
+24.	 Increment counter, decrements assign count (edx).
+25.	 If assign =count 0 goto step 26 if not go to step 19.
+26.	 Print sum 
+27.	 End
+
+
+
+//Input Format
+
+Operand 1 : 03
+Operand 2 : 02
+
+
+//Output Format
+
+Multiplication : 06
