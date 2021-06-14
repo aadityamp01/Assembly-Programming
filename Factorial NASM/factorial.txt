@@ -1,0 +1,29 @@
+PROBLEM STATEMENT:  
+Write x86 ALP to find the factorial of a given integer number on a command line by  
+using recursion. Explicit stack manipulation is expected in the code.
+
+
+ALGORITHM:
+4.	Initialize the Data Segment.
+5.	Initialize AX = 1.
+6.	Load the number in BX.
+7.	Call procedure fact.
+8.	Compare BX with 1, if not go to step 7.
+9.	AX = 1 and return back to the calling program.
+10.	AX = AX × BX.
+11.	Decrement BX.
+12.	Compare BX with 1, if not go to step 7.
+13.	Return back to calling program.
+14.	Stop.
+
+
+
+//Input Format
+
+Enter integer number	
+04
+
+//Output Format
+18
+//(hex would be return)
+
