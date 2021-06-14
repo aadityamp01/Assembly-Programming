@@ -1,0 +1,24 @@
+PROBLEM STATEMENT:  
+Write X86 Assembly Language Program (ALP) to implement following OS commands
+i) COPY, ii) TYPE Using file operations. User is supposed to provide command line arguments  
+
+
+ALGORITHM:
+
+COPY: 
+•	Open file in read mode using open interrupt.
+•	Read contents of file using read interrupt.
+•	Create another file using read interrupt change only attributes.
+•	Open another file using open interrupt.
+•	Write contents of buffer into opened file.
+•	Close both files using close interrupt.
+TYPE: 
+•	Open file in read mode using open interrupt.
+•	Read contents of file using read interrupt.
+•	Display contents of file using write interrupt.
+•	Close file using close interrupt
+DELETE:
+•	DELETE file using delete interrupt.
+
+
+//Chek Input ouput format in the image file1.png, file2.png
