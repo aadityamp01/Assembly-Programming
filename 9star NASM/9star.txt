@@ -1,0 +1,19 @@
+//PROBLEM STATEMENT:
+Write an X86/64 Assembly Language Program to simply display 9stars 
+
+//Use simple Assembly Syntax to display 9stars
+
+//Output Format
+
+Display 9 stars
+*********
+
+
+//Check 9star.asm file and image to understand the code and output
+//9star is output file 
+
+//Linux Commands
+
+nasm -f elf64 9star.asm 
+ld -o 9star 9star.o
+./9star
