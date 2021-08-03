@@ -147,9 +147,9 @@ jle error
  mov [filehandle1],rax 
  xor rax,rax
  fread [filehandle1],buf, buf_len
- mov [abuf_len],rax
- dec byte[abuf_len]
- cmn 1,1,buf,abuf_len ;printing file content on screen
+ mov [buf_len],rax
+ dec byte[buf_len]
+ cmn 1,1,buf,buf_len ;printing file content on screen
 ret
 ;copy command procedure
 cpproc:
