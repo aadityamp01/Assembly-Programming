@@ -39,6 +39,8 @@ ld -o file_name file_name.o
 ```
 ./file_name
 ```
+### Contributors 
+##### If you are interested to contribute on this project, then please raise an issue in appropriate format and send PR. Valid PR will be happily accepted.
 
 ### Star and Fork this Repository, if you like
 ###### You can star ⭐ and fork 🍽️ this repository on GitHub by navigating at the top of this repository.
